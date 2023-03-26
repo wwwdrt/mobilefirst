@@ -42,7 +42,7 @@
 
 > Link to deployed project.
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://dainty-gingersnap-8977c5.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

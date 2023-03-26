@@ -1,10 +1,10 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="drtcode.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Portfolio Project</b></h3>
+<h3><b>Portfolio Project</b></h3>
 
 </div>
 
@@ -14,25 +14,67 @@
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Mobile First<a name="about-project"></a>
+# 📖 Mobile First <a name="about-project"></a>
 
-> Build a mobile-first portfolio website using flex and grid. 
+> Build a mobile-first portfolio website using flex and grid.
 
 ## 🛠 Built With <a name="built-with"></a>
 
+### Tech Stack <a name="tech-stack"></a>
+
 - HTML
 - CSS
-- Flex
-- Grid
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://expressjs.com/">Express.js</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+> Key features of the application. 
+
+- **Grid to organize parent layout**
+- **Flex to organize children content**
+- **Mobile First approach**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -46,6 +88,78 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+> You can use the variables defined in styles.css :root to change the colors of the page. 
+
+### Prerequisites
+
+In order to run this project you need nodejs, you can install it like this:
+- Chocolatey package manager in Windows
+  - [Chocolatey](https://chocolatey.org/install)
+  - `choco install nodejs -y`
+- Brew package manager in Mac
+  - [Brew](https://brew.sh/)
+  - `brew install node -y`
+- Linux
+  - Debian: `sudo apt install nodejs -y`
+  - Arch: `sudo pacman -S nodejs --noconfirm`
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```
+cd my-folder
+git clone https://github.com/juandapps/mobilefirst.git
+```
+
+### Install
+
+> To install project dependencies simply go into the project and 👇
+
+```sh
+  cd my-project
+  npm install -y
+```
+
+### Usage
+
+> To run the project simply open your index.html file in your favorite browser.
+
+### Run tests
+
+To run tests, run the following command:
+
+```
+npx hint .
+
+```
+
+<!--
+Example command:
+
+```sh
+  bin/rails test test/models/article_test.rb
+```
+--->
+
+### Deployment
+
+You can deploy this project using:
+
+<!--
+Example:
+
+```sh
+
+```
+ -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -55,6 +169,19 @@
 - GitHub: [@juandapps](https://github.com/juandapps)
 - Twitter: [@drtcode](https://twitter.com/drtcode)
 - Linktree: [@drtcode](https://linktr.ee/drtcode)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+- [ ] **JavaScript accordion functionality**
+- [ ] **Scrolling animations**
+- [ ] **I will build JavaScript functionality using classes, encapsulation, inheritance, polymorphism, abstraction, 
+  and good ES6 practices**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,12 +213,11 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

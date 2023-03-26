@@ -403,3 +403,13 @@ body {
     margin: auto auto 3.5rem;
 
 }
+
+/* MOBILE UTILITY CLASSES */
+
+.hide {
+    display: none;
+}
+
+.lang-fix-html-img {
+    margin-left: -0.3rem;
+}

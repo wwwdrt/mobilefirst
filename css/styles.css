@@ -1,0 +1,86 @@
+/* FONTS */
+
+/* noinspection CssUnknownTarget */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* COLORS */
+
+:root {
+    /* MAIN COLORS */
+    --title: #172B4D;
+    --text: #344563;
+    --cta-text: #7F8CFF;
+
+    /* PROJECTS COLORS */
+    --projects-title: #172B4D;
+    --projects-text: #344563;
+    --project-badges-text: #6070FF;
+    --project-badges-bg: #EBEBFF;
+    --btn-border: #7F8CFF;
+    --btn-projects-bg: #fff;
+    --btn-projects-text: #6070FF;
+
+    /* ABOUT COLORS */
+    --about-title: #172B4D;
+    --about-text: #344563;
+    --cta-about: #7F8CFF;
+    --btn-about-border: #6070FF;
+    --btn-about-text: #6070FF;
+    --language-title: #000;
+    --language-text: #253858;
+    --language-bg: #F7F7F9;
+}
+
+/* MOBILE VERSION */
+
+body {
+    font-family: Poppins, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #344563;
+}
+
+/* MOBILE NAVBAR */
+
+#navbar {
+    padding: 0.7rem;
+}
+
+#logo h3 {
+    color: #6070FF;
+}
+
+/* MOBILE HAMBURGER */
+
+#menu-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: block;
+    cursor: pointer;
+    width: 22px;
+    z-index: 100;
+}
+
+#menu-btn .bar,
+#menu-btn::after,
+#menu-btn::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #6070FF;
+    margin: 3px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+    cursor: pointer;
+}

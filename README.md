@@ -120,8 +120,7 @@ git clone https://github.com/juandapps/mobilefirst.git
 
 > To install project dependencies simply go into the project and 👇
 
-```sh
-  cd my-project
+```  cd my-project
   npm install -y
 ```
 
@@ -135,28 +134,22 @@ To run tests, run the following command:
 
 ```
 npx hint .
-
+npx stylelint "**/*.{css,scss}"
 ```
 
-<!--
-Example command:
+To fix most of the stylelint errors simply run:
 
-```sh
-  bin/rails test test/models/article_test.rb
 ```
---->
+npx stylelint "**/*.{css,scss}" --fix
+```
 
 ### Deployment
 
-You can deploy this project using:
+You can deploy this project using netlify, just follow the steps:
 
-<!--
-Example:
-
-```sh
-
-```
- -->
+1. Go to netlify.com and login with your github account.
+2. Set up your GitHub repository with the netlify app.
+3. Select your repository and deploy it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

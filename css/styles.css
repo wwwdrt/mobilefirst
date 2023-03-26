@@ -253,3 +253,153 @@ body {
     color: white;
     text-shadow: 0 0 10px white;
 }
+
+/* MOBILE ABOUT */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .about-heading {
+    margin-bottom: 0.2rem;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--title);
+    line-height: 1.3;
+    align-self: center;
+    width: 94%;
+}
+
+#about p {
+    width: 94%;
+    text-align: left;
+}
+
+#about .about-cta {
+    margin: 0.9rem 0.7rem 0;
+    color: var(--cta-text);
+    font-weight: 500;
+    display: inline-block;
+    align-self: flex-start;
+    position: relative;
+    cursor: pointer;
+}
+
+#about .about-cta::before,
+#about .about-cta::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: rgb(6 43 77 / 15%);
+    transition: width 0.3s ease-out;
+    border-radius: 8px;
+}
+
+#about .about-cta::before {
+    left: -0.5rem;
+}
+
+#about .about-cta::after {
+    right: -0.5rem;
+}
+
+#about .about-cta:hover::before,
+#about .about-cta:hover::after {
+    width: calc(106% + 0.5rem);
+}
+
+#about .about-cta:hover {
+    text-shadow: 0 0 10px var(--cta-text);
+}
+
+#about .social-item:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2);
+}
+
+#about .hero-social {
+    display: flex;
+    gap: 1.1rem;
+    align-self: flex-start;
+    margin: 1rem 0 0 1.5rem;
+}
+
+#about .card-btn {
+    padding: 0.7rem 1rem;
+    border: solid 0.1rem var(--btn-about-border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--btn-about-text);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+    margin: 1.3rem 0 2.5rem 1rem;
+}
+
+#about .card-btn:hover {
+    background: #2230D2;
+    border: none;
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+/* MOBILE ACCORDION */
+
+#accordion {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 100%;
+}
+
+#accordion .accordion-section {
+    margin-bottom: -3rem;
+}
+
+#accordion #skills-heading {
+    margin-top: 3.5rem;
+}
+
+#accordion .accordion-section h3 {
+    color: var(--language-title);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+#accordion .language-item {
+    background: var(--language-bg);
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+    align-items: center;
+    width: 90%;
+    margin: auto auto 1rem;
+    border-radius: 12px;
+}
+
+#accordion .language-item span {
+    margin-left: 1rem;
+    color: var(--language-text);
+    font-weight: 500;
+}
+
+#accordion hr {
+    width: 90%;
+    margin: auto;
+    color: #DFE1E6;
+    border: none;
+    border-top: 0.1rem solid;
+}
+
+#accordion hr:nth-child(2) {
+    margin: auto auto 3.5rem;
+
+}

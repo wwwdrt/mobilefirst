@@ -171,3 +171,85 @@ body {
     transition: transform 0.2s ease-in-out;
     transform: scale(1.2);
 }
+
+/* PROJECTS */
+
+#projects {
+    display: grid;
+}
+
+#projects .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 0.1rem solid #EBEBFF;
+    background: transparent;
+    width: 90%;
+    margin: auto auto 3.5rem;
+}
+
+#projects .card-text h2 {
+    margin-top: 0.2rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--projects-title);
+}
+
+#projects .badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    color: #7A869A;
+}
+
+#projects .badges li:first-child {
+    font-weight: 500;
+    color: #344563;
+}
+
+
+#projects p {
+    margin-top: 1rem;
+}
+
+#projects .tags {
+    display: flex;
+    gap: 0.6rem;
+    margin: 1rem 0;
+}
+
+#projects button {
+    padding: 0.8rem 1.2rem;
+    border: 0.1rem solid var(--btn-border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--btn-projects-text);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+#projects .tags li a:first-child {
+    background: var(--project-badges-bg);
+    color: var(--project-badges-text);
+    padding: 0.3rem 0.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+#projects .card:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.02);
+}
+
+#projects .card button:hover {
+    background: #2230D2;
+    border: none;
+    color: white;
+    text-shadow: 0 0 10px white;
+}

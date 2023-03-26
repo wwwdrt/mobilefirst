@@ -247,10 +247,14 @@ body {
 }
 
 #projects .card button:hover {
-  background: #2230d2;
+  background: #6070ff;
   border: none;
   color: white;
   text-shadow: 0 0 10px white;
+}
+
+#projects .card button:active {
+  background: #2230d2;
 }
 
 /* MOBILE ABOUT */
@@ -341,10 +345,14 @@ body {
 }
 
 #about .card-btn:hover {
-  background: #2230d2;
+  background: #6070ff;
   border: none;
   color: white;
   text-shadow: 0 0 10px white;
+}
+
+#about .card-btn:active {
+  background: #2230d2;
 }
 
 /* MOBILE ACCORDION */

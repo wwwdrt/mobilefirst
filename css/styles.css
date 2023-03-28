@@ -48,6 +48,12 @@
   --contact-textarea: #172b4d;
   --contact-btn: #fff;
   --contact-btn-text: #6070ff;
+
+  /* DESKTOP IMAGES */
+  --project-img-1: url("../img/desktopVersion/desktopCard1.svg");
+  --project-img-2: url("../img/desktopVersion/desktopCard2.svg");
+  --project-img-3: url("../img/desktopVersion/desktopCard3.svg");
+  --project-img-4: url("../img/desktopVersion/desktopCard4.svg");
 }
 
 /* MOBILE VERSION */
@@ -575,5 +581,28 @@ body {
   #hero .hero-social {
     margin: 0.7rem 0 0 1.7rem;
     width: auto;
+  }
+
+  /* PROJECTS */
+
+  #projects .card {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .cardDesktopImg-1 {
+    content: var(--project-img-1);
+  }
+
+  .cardDesktopImg-2 {
+    content: var(--project-img-2);
+  }
+
+  .cardDesktopImg-3 {
+    content: var(--project-img-3);
+  }
+
+  .cardDesktopImg-4 {
+    content: var(--project-img-4);
   }
 }

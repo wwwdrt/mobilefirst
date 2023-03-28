@@ -527,9 +527,30 @@ body {
 /* DESKTOP VERSION */
 
 @media (min-width: 768px) {
+  /*  DESKTOP HAMBURGER MENU */
+
+  #menu-btn {
+    display: none;
+  }
+
   /* DESKTOP NAVBAR */
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 8rem;
+  }
+
+  #menu {
+    display: flex;
+    gap: 2rem;
+  }
 
   #menu .menu-item {
     display: block;
+  }
+
+  #menu .menu-item a {
+    color: #344563;
   }
 }

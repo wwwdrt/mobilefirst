@@ -411,6 +411,10 @@ body {
   font-weight: 500;
 }
 
+#hero .hero-info h1 span:last-child {
+  display: block;
+}
+
 #accordion hr {
   width: 90%;
   margin: auto;
@@ -552,5 +556,24 @@ body {
 
   #menu .menu-item a {
     color: #344563;
+  }
+
+  #hero {
+    background-image: url("/img/desktopVersion/heroBgDesktop.svg");
+    border: none;
+    box-shadow: none;
+  }
+
+  #hero .hero-container {
+    padding-left: 10rem;
+  }
+
+  #hero .hero-info h1 span:last-child {
+    display: inline;
+  }
+
+  #hero .hero-social {
+    margin: 0.7rem 0 0 1.7rem;
+    width: auto;
   }
 }

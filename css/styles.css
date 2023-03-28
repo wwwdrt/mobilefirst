@@ -69,6 +69,10 @@ body {
   color: #6070ff;
 }
 
+#menu .menu-item {
+  display: none;
+}
+
 /* MOBILE HAMBURGER */
 
 #menu-btn {
@@ -421,10 +425,6 @@ body {
 
 /* MOBILE UTILITY CLASSES */
 
-.hide {
-  display: none;
-}
-
 .lang-fix-html-img {
   margin-left: -0.22rem;
 }
@@ -522,4 +522,14 @@ body {
 #contact input:focus,
 #contact textarea:focus {
   outline: none;
+}
+
+/* DESKTOP VERSION */
+
+@media (min-width: 768px) {
+  /* DESKTOP NAVBAR */
+
+  #menu .menu-item {
+    display: block;
+  }
 }

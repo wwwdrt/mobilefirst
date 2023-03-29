@@ -63,6 +63,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #344563;
+  background-color: #f7f7f9;
 }
 
 /* MOBILE NAVBAR */
@@ -537,6 +538,10 @@ body {
 /* DESKTOP VERSION */
 
 @media (min-width: 768px) {
+  body {
+    background-color: #f4f5f7;
+  }
+
   /*  DESKTOP HAMBURGER MENU */
 
   #menu-btn {
@@ -590,19 +595,28 @@ body {
     gap: 2rem;
   }
 
-  .cardDesktopImg-1 {
+  #projects .cardDesktopImg-1 {
     content: var(--project-img-1);
   }
 
-  .cardDesktopImg-2 {
+  #projects .cardDesktopImg-2 {
     content: var(--project-img-2);
   }
 
-  .cardDesktopImg-3 {
+  #projects .cardDesktopImg-3 {
     content: var(--project-img-3);
   }
 
-  .cardDesktopImg-4 {
+  #projects .cardDesktopImg-4 {
     content: var(--project-img-4);
+  }
+
+  #projects .row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  #projects .card-content {
+    min-height: 58vh;
+    max-height: 60vh;
   }
 }

@@ -591,6 +591,10 @@ body {
     display: inline;
   }
 
+  #hero .hero-info p {
+    width: 80%;
+  }
+
   #hero .hero-social {
     margin: 0.7rem 0 0 1.7rem;
     width: auto;
@@ -671,7 +675,7 @@ body {
     background-image: url("../img/desktopVersion/contactBgDesktop.svg");
   }
 
-  #contact p {
+  #contact .contact-description {
     width: 50%;
   }
 
@@ -690,5 +694,6 @@ body {
   #contact form .contact-btn {
     align-self: center;
     margin-left: 0;
+    margin-bottom: 8rem;
   }
 }

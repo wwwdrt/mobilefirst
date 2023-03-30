@@ -588,7 +588,7 @@ body {
     width: auto;
   }
 
-  /* PROJECTS */
+  /* DESKTOP PROJECTS */
 
   #projects .card {
     flex-direction: row;
@@ -624,7 +624,7 @@ body {
     display: none;
   }
 
-  /*  ABOUT */
+  /*  DESKTOP ABOUT */
 
   #about {
     flex-direction: row;
@@ -650,4 +650,6 @@ body {
     align-items: center;
     width: 21%;
   }
+
+  /*  DESKTOP CONTACT */
 }

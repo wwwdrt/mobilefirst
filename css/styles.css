@@ -348,7 +348,7 @@ body {
   display: flex;
   gap: 1.1rem;
   align-self: flex-start;
-  margin: 1rem 0 0 1.5rem;
+  margin: 1rem auto 0 0.5rem;
 }
 
 #about .card-btn {
@@ -361,7 +361,7 @@ body {
   font-size: 1rem;
   cursor: pointer;
   align-self: flex-start;
-  margin: 1.3rem 0 2.5rem 1rem;
+  margin: 1rem auto;
 }
 
 #about .card-btn:hover {
@@ -539,7 +539,7 @@ body {
 
 @media (min-width: 768px) {
   body {
-    background-color: #f4f5f7;
+    background: rgba(244, 245, 247, 1);
   }
 
   /*  DESKTOP HAMBURGER MENU */
@@ -622,5 +622,32 @@ body {
 
   #projects .hide {
     display: none;
+  }
+
+  /*  ABOUT */
+
+  #about {
+    flex-direction: row;
+    width: 85%;
+    margin: auto;
+  }
+
+  #about .about-me {
+    width: 90%;
+  }
+
+  #about .languages {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #about .languages .language-item {
+    display: flex;
+    flex-direction: column;
+    background: #f7f7f9;
+    margin: auto 0 0 0;
+    align-items: center;
+    width: 21%;
   }
 }

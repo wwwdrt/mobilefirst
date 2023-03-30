@@ -63,13 +63,14 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #344563;
-  background-color: #f7f7f9;
+  background-color: rgba(244, 245, 247, 1);
 }
 
 /* MOBILE NAVBAR */
 
 #navbar {
   padding: 0.7rem;
+  background: white;
 }
 
 #logo h3 {
@@ -117,6 +118,7 @@ body {
   border-bottom: solid 2px #ebebff;
   box-shadow: 0 5px 5px rgb(0 0 0 / 30%);
   margin-bottom: 4rem;
+  background-color: white;
 }
 
 #hero .hero-container {
@@ -204,9 +206,9 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 1.5rem;
   border: 0.1rem solid #ebebff;
-  background: transparent;
+  background: white;
   width: 90%;
   margin: auto auto 3.5rem;
 }
@@ -284,6 +286,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: white;
 }
 
 #about .about-heading {
@@ -452,7 +455,6 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-top-left-radius: 70px;
-  margin-top: 10rem;
 }
 
 #contact .contact-heading {
@@ -538,10 +540,6 @@ body {
 /* DESKTOP VERSION */
 
 @media (min-width: 768px) {
-  body {
-    background: rgba(244, 245, 247, 1);
-  }
-
   /*  DESKTOP HAMBURGER MENU */
 
   #menu-btn {
@@ -573,6 +571,7 @@ body {
     background-image: url("/img/desktopVersion/heroBgDesktop.svg");
     border: none;
     box-shadow: none;
+    border-bottom-left-radius: 7rem;
   }
 
   #hero .hero-container {
@@ -628,12 +627,15 @@ body {
 
   #about {
     flex-direction: row;
-    width: 85%;
-    margin: auto;
+    background: white;
+    margin-top: 5rem;
+    padding: 6rem;
+    border-top-right-radius: 7rem;
   }
 
   #about .about-me {
     width: 90%;
+    margin-bottom: 10rem;
   }
 
   #about .languages {
@@ -652,6 +654,12 @@ body {
   }
 
   /*  DESKTOP CONTACT */
+
+  #contact {
+    border-top-left-radius: 7rem;
+    margin-top: -4rem;
+    background-image: url("../img/desktopVersion/contactBgDesktop.svg");
+  }
 
   #contact p {
     width: 50%;

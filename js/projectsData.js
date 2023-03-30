@@ -76,6 +76,7 @@ class projectsData {
     ];
     this._window = window.matchMedia("(min-width: 768px)");
     this._window.addEventListener("change", () => this.updateProjects());
+    this.updateProjects();
   }
 
   setProjectElements(index) {

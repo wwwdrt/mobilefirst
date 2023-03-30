@@ -287,6 +287,14 @@ body {
   justify-content: center;
   align-items: center;
   background: white;
+  margin-top: 5rem;
+  padding: 6rem 0 13rem 0;
+  border-top-right-radius: 6rem;
+}
+
+#about .about-me {
+  padding: 1.5rem;
+  margin-top: 2rem;
 }
 
 #about .about-heading {
@@ -454,7 +462,8 @@ body {
   background-color: var(--contact-bg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  border-top-left-radius: 70px;
+  border-top-left-radius: 6rem;
+  margin-top: -5rem;
 }
 
 #contact .contact-heading {

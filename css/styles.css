@@ -210,7 +210,7 @@ body {
   border: 0.1rem solid #ebebff;
   background: white;
   width: 90%;
-  margin: auto 3rem 1rem;
+  margin: auto auto 3.5rem;
 }
 
 #projects .card-text h2 {
@@ -601,6 +601,7 @@ body {
   #projects .card {
     flex-direction: row;
     gap: 2rem;
+    margin: auto 3rem 1rem;
   }
 
   #projects .cardDesktopImg-1 {

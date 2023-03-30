@@ -652,4 +652,25 @@ body {
   }
 
   /*  DESKTOP CONTACT */
+
+  #contact p {
+    width: 50%;
+  }
+
+  #contact form {
+    width: 50%;
+  }
+
+  #contact form input {
+    border-radius: 0;
+  }
+
+  #contact form textarea {
+    border-radius: 0;
+  }
+
+  #contact form .contact-btn {
+    align-self: center;
+    margin-left: 0;
+  }
 }

@@ -601,7 +601,7 @@ body {
   #projects .card {
     flex-direction: row;
     gap: 2rem;
-    margin: auto 3rem 1rem;
+    margin: auto auto 9rem;
   }
 
   #projects .cardDesktopImg-1 {
@@ -638,7 +638,7 @@ body {
   #about {
     flex-direction: row;
     background: white;
-    margin-top: 5rem;
+    margin-top: 2rem;
     padding: 6rem;
     border-top-right-radius: 7rem;
   }

@@ -1,10 +1,10 @@
 class projectsData {
   constructor() {
-    this._projects = [
+    this.projects = [
       {
         // CARD 2
         description:
-          "Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.",
+          'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
         tags: `
                 <li><a href="#" class="card-badge">HTML</a></li>
                 <li><a href="#" class="card-badge">Ruby on rails</a></li>
@@ -19,13 +19,13 @@ class projectsData {
                     <li>2015</li>
                 </ul>
         `,
-        cardText: document.querySelector("[data-text-card2]"),
-        cardTags: document.querySelector("[data-tags-card2]"),
-        cardBadges: document.querySelector("[data-badges-card2]"),
+        cardText: document.querySelector('[data-text-card2]'),
+        cardTags: document.querySelector('[data-tags-card2]'),
+        cardBadges: document.querySelector('[data-badges-card2]'),
       },
       {
         // CARD 3
-        title: "Facebook 360",
+        title: 'Facebook 360',
         description:
           "Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.",
         tags: `
@@ -43,16 +43,16 @@ class projectsData {
                     <li>2015</li>
                 </ul>
         `,
-        cardTitle: document.querySelector("[data-title-card3]"),
-        cardText: document.querySelector("[data-text-card3]"),
-        cardTags: document.querySelector("[data-tags-card3]"),
-        cardBadges: document.querySelector("[data-badges-card3]"),
+        cardTitle: document.querySelector('[data-title-card3]'),
+        cardText: document.querySelector('[data-text-card3]'),
+        cardTags: document.querySelector('[data-tags-card3]'),
+        cardBadges: document.querySelector('[data-badges-card3]'),
       },
       {
         // CARD 4
-        title: "Uber Navigation",
+        title: 'Uber Navigation',
         description:
-          "A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.",
+          'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
         tags: `
                 <li><a href="#" class="card-badge">HTML</a></li>
                 <li><a href="#" class="card-badge">Ruby on rails</a></li>
@@ -68,19 +68,19 @@ class projectsData {
                     <li>2018</li>
                 </ul>
         `,
-        cardTitle: document.querySelector("[data-title-card4]"),
-        cardText: document.querySelector("[data-text-card4]"),
-        cardTags: document.querySelector("[data-tags-card4]"),
-        cardBadges: document.querySelector("[data-badges-card4]"),
+        cardTitle: document.querySelector('[data-title-card4]'),
+        cardText: document.querySelector('[data-text-card4]'),
+        cardTags: document.querySelector('[data-tags-card4]'),
+        cardBadges: document.querySelector('[data-badges-card4]'),
       },
     ];
-    this._window = window.matchMedia("(min-width: 768px)");
-    this._window.addEventListener("change", () => this.updateProjects());
+    this.window = window.matchMedia('(min-width: 768px)');
+    this.window.addEventListener('change', () => this.updateProjects());
     this.updateProjects();
   }
 
   setProjectElements(index) {
-    this._projects.forEach(
+    this.projects.forEach(
       (
         {
           cardTitle,
@@ -91,7 +91,7 @@ class projectsData {
           description,
           tags,
           badges,
-        } = this._projects[index]
+        } = this.projects[index],
       ) => {
         cardText.textContent = description;
         cardTags.innerHTML = tags;
@@ -99,13 +99,13 @@ class projectsData {
         if (title) {
           cardTitle.textContent = title;
         }
-      }
+      },
     );
   }
 
   updateProjects() {
-    if (this._window.matches) {
-      this.projects = this._projects.slice(0, 3);
+    if (this.window.matches) {
+      this.projects = this.projects.slice(0, 3);
       this.setProjectElements(0);
       this.setProjectElements(1);
       this.setProjectElements(2);

@@ -111,10 +111,6 @@ body {
   background-color: white;
 }
 
-#menu-btn.is-active .bar {
-  opacity: 0;
-}
-
 #menu-btn.is-active::after {
   transform: rotate(43deg) translate(-7px, -8px);
   background-color: white;

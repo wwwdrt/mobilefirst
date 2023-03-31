@@ -69,12 +69,12 @@ body {
 /* MOBILE NAVBAR */
 
 #navbar {
-  padding: 0.7rem;
   background: white;
 }
 
 #logo h3 {
   color: #6070ff;
+  padding: 0.7rem;
 }
 
 #menu .menu-item {
@@ -104,6 +104,45 @@ body {
   transition: 0.4s;
   border-radius: 2px;
   cursor: pointer;
+}
+
+#menu-btn.is-active::before {
+  transform: rotate(-43deg) translate(-1px, 1px);
+  background-color: white;
+}
+
+#menu-btn.is-active .bar {
+  opacity: 0;
+}
+
+#menu-btn.is-active::after {
+  transform: rotate(43deg) translate(-7px, -8px);
+  background-color: white;
+}
+
+/* MOBILE HAMBURGER OVERLAY */
+
+#navbar #mobile-menu-overlay {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(-29, 55, 357, 0.6);
+  backdrop-filter: blur(6px);
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  text-align: start;
+  height: 100vh;
+  padding: 4rem 0 0 3rem;
+  top: 0;
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 2;
+  z-index: 98;
+}
+
+#mobile-menu-overlay .overlay-item {
+  color: white;
 }
 
 /* MOBILE HERO */

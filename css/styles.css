@@ -74,6 +74,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 97;
 }
 
 #logo h3 {

@@ -1,116 +1,167 @@
-class projectsData {
+class projectData {
+  #projects;
+  #window;
   constructor() {
-    this.projects = [
+    this.#projects = [
+      //   CARD 1
       {
-        // CARD 2
-        description:
-          'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-        tags: `
-                <li><a href="#" class="card-badge">HTML</a></li>
-                <li><a href="#" class="card-badge">Ruby on rails</a></li>
-                <li><a href="#" class="card-badge">JavaScript</a></li>
-        `,
+        image: "/img/firstMobileCard.svg",
+        imageVersion: "cardDesktopImg-1",
+        title: "Tonic",
         badges: `
-                <ul class="badges" data-badges-card2>
-                    <li>FACEBOOK</li>
+                    <li>CANOPI</li>
                     <li><i class="bx bx-star"></i></li>
-                    <li>Full Stack Dev</li>
+                    <li>Back End Dev</li>
                     <li><i class="bx bx-meteor"></i></li>
                     <li>2015</li>
-                </ul>
         `,
-        cardText: document.querySelector('[data-text-card2]'),
-        cardTags: document.querySelector('[data-tags-card2]'),
-        cardBadges: document.querySelector('[data-badges-card2]'),
-      },
-      {
-        // CARD 3
-        title: 'Facebook 360',
         description:
-          "Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.",
+          "A daily selection of privately personalized reads; no accounts or sign-ups required.",
         tags: `
                 <li><a href="#" class="card-badge">HTML</a></li>
-                <li><a href="#" class="card-badge">Ruby on rails</a></li>
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
+        liveVersion: "https://www.bing.com",
+        sourceCode: "https://github.com",
+      },
+      //   CARD 2
+      {
+        image: "/img/secondMobileCard.svg",
+        imageVersion: "cardDesktopImg-2",
+        title: `Multi-Post <br class="hide"> Stories`,
         badges: `
-                <ul class="badges" data-badges-card3>
-                    <li>FACEBOOK</li>
+                    <li>CANOPI</li>
                     <li><i class="bx bx-star"></i></li>
-                    <li>Full Stack Dev</li>
+                    <li>Back End Dev</li>
                     <li><i class="bx bx-meteor"></i></li>
                     <li>2015</li>
-                </ul>
         `,
-        cardTitle: document.querySelector('[data-title-card3]'),
-        cardText: document.querySelector('[data-text-card3]'),
-        cardTags: document.querySelector('[data-tags-card3]'),
-        cardBadges: document.querySelector('[data-badges-card3]'),
-      },
-      {
-        // CARD 4
-        title: 'Uber Navigation',
         description:
-          'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
+          "A daily selection of privately personalized reads; no accounts or sign-ups required.",
         tags: `
                 <li><a href="#" class="card-badge">HTML</a></li>
-                <li><a href="#" class="card-badge">Ruby on rails</a></li>
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
+        liveVersion: "https://www.bing.com",
+        sourceCode: "https://github.com",
+      },
+      //   CARD 3
+      {
+        image: "/img/thirdMobileCard.svg",
+        imageVersion: "cardDesktopImg-3",
+        title: "Tonic",
         badges: `
-                <ul class="badges" data-badges-card3>
-                    <li>Uber</li>
+                    <li>CANOPI</li>
                     <li><i class="bx bx-star"></i></li>
-                    <li>Lead Developer</li>
+                    <li>Back End Dev</li>
                     <li><i class="bx bx-meteor"></i></li>
-                    <li>2018</li>
-                </ul>
+                    <li>2015</li>
         `,
-        cardTitle: document.querySelector('[data-title-card4]'),
-        cardText: document.querySelector('[data-text-card4]'),
-        cardTags: document.querySelector('[data-tags-card4]'),
-        cardBadges: document.querySelector('[data-badges-card4]'),
+        description:
+          "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+        tags: `
+                <li><a href="#" class="card-badge">HTML</a></li>
+                <li><a href="#" class="card-badge">CSS</a></li>
+                <li><a href="#" class="card-badge">JavaScript</a></li>
+        `,
+        liveVersion: "https://www.bing.com",
+        sourceCode: "https://github.com",
+      },
+      //   CARD 4
+      {
+        image: "/img/fourthMobileCard.svg",
+        imageVersion: "cardDesktopImg-4",
+        title: `Multi-Post <br class="hide"> Stories`,
+        badges: `
+                    <li>CANOPI</li>
+                    <li><i class="bx bx-star"></i></li>
+                    <li>Back End Dev</li>
+                    <li><i class="bx bx-meteor"></i></li>
+                    <li>2015</li>
+        `,
+        description:
+          "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+        tags: `
+                <li><a href="#" class="card-badge">HTML</a></li>
+                <li><a href="#" class="card-badge">CSS</a></li>
+                <li><a href="#" class="card-badge">JavaScript</a></li>
+        `,
+        liveVersion: "https://www.bing.com",
+        sourceCode: "https://github.com",
       },
     ];
-    this.window = window.matchMedia('(min-width: 768px)');
-    this.window.addEventListener('change', () => this.updateProjects());
-    this.updateProjects();
+    this.#window = window.matchMedia("(min-width: 768px)");
+    this.#window.addEventListener("change", this.updateProjectsData);
+    this.generatePopupData();
+    this.updateProjectsData();
+    this.addPopupListener();
+    this.addOverlayPopupListener();
   }
 
-  setProjectElements(index) {
-    this.projects.forEach(
-      (
-        {
-          cardTitle,
-          cardText,
-          cardTags,
-          cardBadges,
-          title,
-          description,
-          tags,
-          badges,
-        } = this.projects[index],
-      ) => {
-        cardText.textContent = description;
-        cardTags.innerHTML = tags;
-        cardBadges.innerHTML = badges;
-        if (title) {
-          cardTitle.textContent = title;
-        }
-      },
-    );
-  }
+  addPopupListener = () => {};
 
-  updateProjects() {
-    if (this.window.matches) {
-      this.projects = this.projects.slice(0, 3);
-      this.setProjectElements(0);
-      this.setProjectElements(1);
-      this.setProjectElements(2);
+  addOverlayPopupListener = () => {};
+
+  generatePopupData = () => {
+    const root = document.querySelector("#projects");
+
+    for (const project of this.#projects) {
+      const parentContainer = document.createElement("article");
+      parentContainer.classList.add("card");
+
+      const figure = document.createElement("figure");
+      figure.classList.add("card-image");
+
+      const img = document.createElement("img");
+      img.classList.add(project.imageVersion);
+      img.src = project.image;
+      img.alt = "project image";
+
+      const cardContent = document.createElement("section");
+      cardContent.classList.add("card-content");
+
+      const cardText = document.createElement("div");
+      cardText.classList.add("card-text");
+
+      const h2 = document.createElement("h2");
+      h2.innerHTML = project.title;
+
+      const badges = document.createElement("ul");
+      badges.classList.add("badges");
+      badges.innerHTML = project.badges.trim();
+
+      const p = document.createElement("p");
+      p.textContent = project.description;
+
+      const tags = document.createElement("ul");
+      tags.classList.add("tags");
+      tags.innerHTML = project.tags.trim();
+
+      const button = document.createElement("button");
+      button.classList.add("card-btn");
+      button.type = "button";
+      button.tabIndex = 0;
+      button.ariaLabel = "See Project";
+      button.textContent = "See Project";
+
+      root.appendChild(parentContainer);
+      parentContainer.appendChild(figure);
+      figure.appendChild(img);
+      parentContainer.appendChild(cardContent);
+      cardContent.appendChild(cardText);
+      cardText.appendChild(h2);
+      cardText.appendChild(badges);
+      cardText.appendChild(p);
+      cardText.appendChild(tags);
+      cardContent.appendChild(button);
     }
-  }
+  };
+
+  updateProjectsData = () => {};
+
+  hidePopup = () => {};
 }
 
-export default projectsData;
+export default projectData;

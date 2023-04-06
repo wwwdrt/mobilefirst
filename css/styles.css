@@ -493,7 +493,7 @@ body {
   font-weight: 500;
   color: var(--contact-btn-text);
   align-self: flex-start;
-  margin-left: 1.3rem;
+  margin-left: 5%;
 }
 
 #contact form .contact-btn:hover {

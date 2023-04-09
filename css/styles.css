@@ -563,7 +563,7 @@ body {
 /* DESKTOP VERSION */
 
 @media (min-width: 768px) {
-  /*  DESKTOP HAMBURGER MENU */
+  /* DESKTOP ANIMATIONS */
 
   #logo h3 {
     transform-origin: center;
@@ -579,6 +579,37 @@ body {
       transform: rotate(360deg);
     }
   }
+
+  .typewriter {
+    animation: typing 10s, steps(75), blink 0.5s infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid black;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+      border-right: none;
+    }
+  }
+
+  @keyframes blink {
+    from,
+    to {
+      border-color: transparent;
+    }
+
+    50% {
+      border-color: black;
+    }
+  }
+
+  /*  DESKTOP HAMBURGER MENU */
 
   #menu-btn {
     display: none;

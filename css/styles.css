@@ -742,8 +742,12 @@ body {
     border-radius: 0;
   }
 
-  #contact form textarea {
-    border-radius: 0;
+  input::placeholder {
+    transition: transform 0.2s ease;
+  }
+
+  input:hover::placeholder {
+    transform: translateX(10px);
   }
 
   #contact form .contact-btn {

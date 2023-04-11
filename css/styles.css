@@ -50,10 +50,10 @@
   --contact-btn-text: #6070ff;
 
   /* DESKTOP IMAGES */
-  --project-img-1: url("../img/desktopVersion/desktopCard1.svg");
-  --project-img-2: url("../img/desktopVersion/desktopCard2.svg");
-  --project-img-3: url("../img/desktopVersion/desktopCard3.svg");
-  --project-img-4: url("../img/desktopVersion/desktopCard4.svg");
+  --project-img-1: url("../img/desktop/desktopcard1.svg");
+  --project-img-2: url("../img/desktop/desktopcard2.svg");
+  --project-img-3: url("../img/desktop/desktopcard3.svg");
+  --project-img-4: url("../img/desktop/desktopcard4.svg");
 }
 
 /* MOBILE VERSION */
@@ -637,7 +637,7 @@ body {
   }
 
   #hero {
-    background-image: url("./img/DesktopVersion/heroBgDesktop.svg");
+    background-image: url("../img/desktop/herobgdesktop.svg");
     border: none;
     box-shadow: none;
     border-bottom-left-radius: 7rem;
@@ -727,7 +727,7 @@ body {
   #contact {
     border-top-left-radius: 7rem;
     margin-top: -4rem;
-    background-image: url("../img/desktopVersion/contactBgDesktop.svg");
+    background-image: url("../img/desktop/contactbgdesktop.svg");
   }
 
   #contact p {

@@ -1,12 +1,11 @@
 class projectData {
   #projects;
-  #window;
   constructor() {
     this.#projects = [
       //   CARD 1
       {
         image: "/img/firstMobileCard.svg",
-        imageVersion: "cardDesktopImg-1",
+        desktopImage: "cardDesktopImg-1",
         title: "Tonic",
         badges: `
                     <li>CANOPI</li>
@@ -28,7 +27,7 @@ class projectData {
       //   CARD 2
       {
         image: "/img/secondMobileCard.svg",
-        imageVersion: "cardDesktopImg-2",
+        desktopImage: "cardDesktopImg-2",
         title: `Multi-Post <br class="hide"> Stories`,
         badges: `
                     <li>CANOPI</li>
@@ -50,7 +49,7 @@ class projectData {
       //   CARD 3
       {
         image: "/img/thirdMobileCard.svg",
-        imageVersion: "cardDesktopImg-3",
+        desktopImage: "cardDesktopImg-3",
         title: "Tonic",
         badges: `
                     <li>CANOPI</li>
@@ -72,7 +71,7 @@ class projectData {
       //   CARD 4
       {
         image: "/img/fourthMobileCard.svg",
-        imageVersion: "cardDesktopImg-4",
+        desktopImage: "cardDesktopImg-4",
         title: `Multi-Post <br class="hide"> Stories`,
         badges: `
                     <li>CANOPI</li>
@@ -92,19 +91,10 @@ class projectData {
         sourceCode: "https://github.com",
       },
     ];
-    this.#window = window.matchMedia("(min-width: 768px)");
-    this.#window.addEventListener("change", this.updateProjectsData);
-    this.generatePopupData();
-    this.updateProjectsData();
-    this.addPopupListener();
-    this.addOverlayPopupListener();
+    this.generateProjectsData();
   }
 
-  addPopupListener = () => {};
-
-  addOverlayPopupListener = () => {};
-
-  generatePopupData = () => {
+  generateProjectsData = () => {
     const root = document.querySelector("#projects");
 
     for (const project of this.#projects) {
@@ -115,7 +105,7 @@ class projectData {
       figure.classList.add("card-image");
 
       const img = document.createElement("img");
-      img.classList.add(project.imageVersion);
+      img.classList.add(project.desktopImage);
       img.src = project.image;
       img.alt = "project image";
 
@@ -158,10 +148,6 @@ class projectData {
       cardContent.appendChild(button);
     }
   };
-
-  updateProjectsData = () => {};
-
-  hidePopup = () => {};
 }
 
 export default projectData;

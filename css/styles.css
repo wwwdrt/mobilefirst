@@ -24,7 +24,7 @@
   /* PROJECTS COLORS */
   --projects-title: #172b4d;
   --projects-text: #344563;
-  --project-badges-text: #6070ff;
+  --project-badges-text: #0015d6;
   --project-badges-bg: #ebebff;
   --btn-border: #7f8cff;
   --btn-projects-bg: #fff;
@@ -224,7 +224,7 @@ body {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
-  color: #7a869a;
+  color: #3b424e;
 }
 
 #projects .badges li:first-child {

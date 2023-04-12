@@ -19,7 +19,7 @@
   /* MAIN COLORS */
   --title: #172b4d;
   --text: #344563;
-  --cta-text: #7f8cff;
+  --cta-text: #0015d6;
 
   /* PROJECTS COLORS */
   --projects-title: #172b4d;
@@ -28,14 +28,14 @@
   --project-badges-bg: #ebebff;
   --btn-border: #7f8cff;
   --btn-projects-bg: #fff;
-  --btn-projects-text: #6070ff;
+  --btn-projects-text: #0015d6;
 
   /* ABOUT COLORS */
   --about-title: #172b4d;
   --about-text: #344563;
   --cta-about: #7f8cff;
   --btn-about-border: #6070ff;
-  --btn-about-text: #6070ff;
+  --btn-about-text: #0015d6;
   --language-title: #000;
   --language-text: #253858;
   --language-bg: #f7f7f9;
@@ -47,7 +47,7 @@
   --contact-input: #172b4d;
   --contact-textarea: #172b4d;
   --contact-btn: #fff;
-  --contact-btn-text: #6070ff;
+  --contact-btn-text: #0015d6;
 
   /* DESKTOP IMAGES */
   --project-img-1: url("../img/desktop/desktopcard1.svg");

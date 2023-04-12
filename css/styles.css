@@ -73,8 +73,9 @@ body {
   background: white;
 }
 
-#logo h3 {
+#logo {
   color: #6070ff;
+  font-weight: 600;
 }
 
 #menu .menu-item {

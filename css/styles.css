@@ -617,7 +617,7 @@ body {
   }
 
   #hero {
-    background-image: url("/img/desktopVersion/heroBgDesktop.svg");
+    background-image: url("../img/desktopVersion/bg.svg");
     border: none;
     box-shadow: none;
     border-bottom-left-radius: 7rem;

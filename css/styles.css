@@ -603,6 +603,10 @@ body {
     padding: 1rem 8rem;
   }
 
+  #logo h3 {
+    padding: 0;
+  }
+
   #menu {
     display: flex;
     gap: 2rem;

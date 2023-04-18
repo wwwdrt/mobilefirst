@@ -1,7 +1,8 @@
-class projectData {
-  #projects;
+/* eslint-disable */
+class Projects {
+  #data;
   constructor() {
-    this.#projects = [
+    this.#data = [
       //   CARD 1
       {
         image: "/img/firstMobileCard.svg",
@@ -97,7 +98,7 @@ class projectData {
   generateProjectsData = () => {
     const root = document.querySelector("#projects");
 
-    for (const project of this.#projects) {
+    for (const data of this.#data) {
       const parentContainer = document.createElement("article");
       parentContainer.classList.add("card");
 
@@ -105,8 +106,8 @@ class projectData {
       figure.classList.add("card-image");
 
       const img = document.createElement("img");
-      img.classList.add(project.desktopImage);
-      img.src = project.image;
+      img.classList.add(data.desktopImage);
+      img.src = data.image;
       img.alt = "project image";
 
       const cardContent = document.createElement("section");
@@ -116,18 +117,18 @@ class projectData {
       cardText.classList.add("card-text");
 
       const h2 = document.createElement("h2");
-      h2.innerHTML = project.title;
+      h2.innerHTML = data.title;
 
       const badges = document.createElement("ul");
       badges.classList.add("badges");
-      badges.innerHTML = project.badges.trim();
+      badges.innerHTML = data.badges.trim();
 
       const p = document.createElement("p");
-      p.textContent = project.description;
+      p.textContent = data.description;
 
       const tags = document.createElement("ul");
       tags.classList.add("tags");
-      tags.innerHTML = project.tags.trim();
+      tags.innerHTML = data.tags.trim();
 
       const button = document.createElement("button");
       button.classList.add("card-btn");
@@ -150,4 +151,4 @@ class projectData {
   };
 }
 
-export default projectData;
+export default Projects;

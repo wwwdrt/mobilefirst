@@ -1,6 +1,7 @@
-class mobileMenu {
-  #menu;
+/* eslint-disable */
+class Menu {
 
+  #menu;
   #overlay;
 
   constructor(menuSelector, overlaySelector) {
@@ -59,4 +60,4 @@ class mobileMenu {
   };
 }
 
-export default mobileMenu;
+export default Menu;

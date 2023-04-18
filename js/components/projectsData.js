@@ -93,10 +93,14 @@ class projectsData {
           badges,
         } = this.projects[index],
       ) => {
+        // eslint-disable-next-line no-param-reassign
         cardText.textContent = description;
+        // eslint-disable-next-line no-param-reassign
         cardTags.innerHTML = tags;
+        // eslint-disable-next-line no-param-reassign
         cardBadges.innerHTML = badges;
         if (title) {
+          // eslint-disable-next-line no-param-reassign
           cardTitle.textContent = title;
         }
       },

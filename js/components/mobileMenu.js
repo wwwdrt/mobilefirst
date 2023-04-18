@@ -1,6 +1,7 @@
 class mobileMenu {
-  #menu;
 
+  //eslint-disable-line
+  #menu;
   #overlay;
 
   constructor(menuSelector, overlaySelector) {

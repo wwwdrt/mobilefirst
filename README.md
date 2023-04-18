@@ -1,216 +1,101 @@
-<a name="readme-top"></a>
+# HTML & CSS3 & JavaScript Course
 
-<div align="center">
-  <img src="drtcode.png" alt="logo" width="140"  height="auto" />
-  <br/>
+If you are not familiar with linters, read [root level README](../README.md).
 
-<h3><b>Portfolio Project</b></h3>
+## Set-up GitHub Actions
 
-</div>
+Please do the following **steps in this order**:
 
-<!-- TABLE OF CONTENTS -->
+1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
+   - **Remember** to use the file linked above
+   - **Remember** that `.github` folder starts with a dot.
+2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
+   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
+3. When you open your first pull request you should see the result of the GitHub actions checks:
 
-# 📗 Table of Contents
+![gh actions checks](../assets/images/gh-actions-html-css-checks.png)
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
+Click on the `Details` link of each action to see the full output and the errors that need to be fixed:
 
-<!-- PROJECT DESCRIPTION -->
+![gh actions failing checks](../assets/images/gh-actions-html-css-failing-checks.png)
 
-# 📖 Mobile First <a name="about-project"></a>
+## Set-up linters in your local env
 
-> Build a mobile-first portfolio website using flex and grid.
-
-## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
-
-- HTML
-- CSS
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
-> Key features of the application. 
-
-- **Grid to organize parent layout**
-- **Flex to organize children content**
-- **Mobile First approach**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Link to deployed project.
-
-- [Live Demo Link](https://dainty-gingersnap-8977c5.netlify.app/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-> You can use the variables defined in styles.css :root to change the colors of the page. 
-
-### Prerequisites
-
-In order to run this project you need nodejs, you can install it like this:
-- Chocolatey package manager in Windows
-  - [Chocolatey](https://chocolatey.org/install)
-  - `choco install nodejs -y`
-- Brew package manager in Mac
-  - [Brew](https://brew.sh/)
-  - `brew install node -y`
-- Linux
-  - Debian: `sudo apt install nodejs -y`
-  - Arch: `sudo pacman -S nodejs --noconfirm`
-
-### Setup
-
-Clone this repository to your desired folder:
+**Note**: The `npm` package manager is going to create a `node_modules` directory to install all of your dependencies. You shouldn't commit that directory. To avoid that, you can create a [`.gitignore`](https://git-scm.com/docs/gitignore) file and add `node_modules` to it:
 
 ```
-cd my-folder
-git clone https://github.com/juandapps/mobilefirst.git
+# .gitignore
+node_modules/
 ```
 
-### Install
+### [Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
-> To install project dependencies simply go into the project and 👇
+An open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more.
 
-```  cd my-project
-  npm install -y
-```
+You can get the Lighthouse report by any of the following ways:
 
-### Usage
+- [In Chrome DevTools](https://developers.google.com/web/tools/lighthouse#devtools)
+- [From the command line](https://developers.google.com/web/tools/lighthouse#cli)
+- [As a Node module](https://developers.google.com/web/tools/lighthouse#programmatic)
+- [From a web UI](https://developers.google.com/web/tools/lighthouse#psi)
 
-> To run the project simply open your index.html file in your favorite browser.
+To access the report generated by Lighthouse on your pull request, click the `Details` link for the `Linters/Lighthouse` check and you will see the full output of the action:
 
-### Run tests
+![lighthouse report](../assets/images/lighthouse-report.png)
 
-To run tests, run the following command:
+### [Webhint](https://webhint.io/)
 
-```
-npx hint .
-npx stylelint "**/*.{css,scss}"
-```
+A customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors.
 
-To fix most of the stylelint errors simply run:
+**NOTE:** If you are running on Windows, you need to initialize npm to create `package.json` file. 
+   ```
+   npm init -y
+   ```
 
-```
-npx stylelint "**/*.{css,scss}" --fix
-```
+1. Run
+   ```
+   npm install --save-dev hint@7.x
+   ```
+   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
+2. Copy [.hintrc](.hintrc) to the root directory of your project.
+3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
+   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
+4. Run
+   ```
+   npx hint .
+   ```
+5. Fix validation errors.
 
-### Deployment
+### [Stylelint](https://stylelint.io/)
 
-You can deploy this project using netlify, just follow the steps:
+A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
 
-1. Go to netlify.com and login with your github account.
-2. Set up your GitHub repository with the netlify app.
-3. Select your repository and deploy it.
+1. Run
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+   ```
+   npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+   ```
 
-<!-- AUTHORS -->
+   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
 
-## 👥 Authors <a name="authors"></a>
+2. Copy [.stylelintrc.json](./.stylelintrc.json) to the root directory of your project.
+3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
+   - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
+4. Run `npx stylelint "**/*.{css,scss}"` on the root of your directory of your project.
+5. Fix linter errors.
+6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Stylelint](https://stylelint.io/user-guide/usage/options) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
 
-👤 **Juan**
+### [ESLint](https://eslint.org/)
 
-- GitHub: [@juandapps](https://github.com/juandapps)
-- Twitter: [@drtcode](https://twitter.com/drtcode)
-- Linktree: [@drtcode](https://linktr.ee/drtcode)
+1. Run 
+   ```
+   npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+   ``` 
+   *not sure how to use npm? Read [this](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).*
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **JavaScript accordion functionality**
-- [ ] **Scrolling animations**
-- [ ] **I will build JavaScript functionality using classes, encapsulation, inheritance, polymorphism, abstraction, 
-  and good ES6 practices**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
-
-## ⭐️ Show your support <a name="support"></a>
-
-> If you support this project, please give it a ⭐️!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> I would like to express my sincere gratitude to Microverse for their unwavering support and guidance throughout my
-> journey. A special thanks to Nikolas Klener, Ariel Camus, Andrea Funda, Bee Quesada, Luis Valades, Javier Vargas,
-> Juan Zorrilla, Mahdi Aghaali, Sandro Hernandez, Temitope Ogunleye, and Amare Kassa, who have been instrumental in my growth as a programmer. Your insightful feedback and encouragement have been invaluable to me. I am also grateful to all the amazing code reviewers I have had the privilege to interact with, and I look forward to continuing these enriching connections. Once again, thank you for everything you've done and continue to do.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+2. Copy [.eslintrc.json](./.eslintrc.json) to the root directory of your project.
+3. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
+    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
+4. Run `npx eslint .` on the root of your directory of your project.
+5. Fix linter errors.
+6. **IMPORTANT NOTE**: feel free to research [auto-correct options for Eslint](https://eslint.org/docs/latest/user-guide/command-line-interface#fixing-problems) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!

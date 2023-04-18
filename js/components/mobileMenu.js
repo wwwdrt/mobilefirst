@@ -1,6 +1,6 @@
+/* eslint-disable */
 class mobileMenu {
 
-  //eslint-disable-line
   #menu;
   #overlay;
 
@@ -59,5 +59,6 @@ class mobileMenu {
     document.body.style.removeProperty('overflow');
   };
 }
+/* eslint-disable */
 
 export default mobileMenu;

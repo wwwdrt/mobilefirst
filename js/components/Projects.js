@@ -5,6 +5,7 @@ class Projects {
     this.#data = [
       //   CARD 1
       {
+        id: "1",
         image: "/img/firstMobileCard.svg",
         desktopImage: "cardDesktopImg-1",
         title: "Tonic",
@@ -27,6 +28,7 @@ class Projects {
       },
       //   CARD 2
       {
+        id: "2",
         image: "/img/secondMobileCard.svg",
         desktopImage: "cardDesktopImg-2",
         title: `Multi-Post <br class="hide"> Stories`,
@@ -49,6 +51,7 @@ class Projects {
       },
       //   CARD 3
       {
+        id: "3",
         image: "/img/thirdMobileCard.svg",
         desktopImage: "cardDesktopImg-3",
         title: "Tonic",
@@ -71,6 +74,7 @@ class Projects {
       },
       //   CARD 4
       {
+        id: "4",
         image: "/img/fourthMobileCard.svg",
         desktopImage: "cardDesktopImg-4",
         title: `Multi-Post <br class="hide"> Stories`,
@@ -136,6 +140,7 @@ class Projects {
       button.tabIndex = 0;
       button.ariaLabel = "See Project";
       button.textContent = "See Project";
+      button.setAttribute("data-project", data.id);
 
       root.appendChild(parentContainer);
       parentContainer.appendChild(figure);

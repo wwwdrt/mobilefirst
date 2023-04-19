@@ -205,9 +205,10 @@ class Popup {
     figure.appendChild(img);
     overlay.appendChild(containerB);
     containerB.appendChild(p);
-    containerB.appendChild(tags);
-    containerB.appendChild(hr);
-    containerB.appendChild(buttons);
+    containerB.appendChild(childrenB);
+    childrenB.appendChild(tags);
+    childrenB.appendChild(hr);
+    childrenB.appendChild(buttons);
     buttons.appendChild(firstButton);
     buttons.appendChild(secondButton);
     firstButton.appendChild(linkIcon);

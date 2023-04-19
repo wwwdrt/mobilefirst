@@ -745,6 +745,10 @@ body {
 
   /* DESKTOP NAVBAR */
 
+  #logo h3 {
+    padding: 0;
+  }
+
   #navbar {
     display: flex;
     justify-content: space-between;

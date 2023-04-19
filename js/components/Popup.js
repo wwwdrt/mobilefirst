@@ -184,11 +184,11 @@ class Popup {
     secondButton.ariaLabel = "See Source";
 
     firstButton.addEventListener("click", () =>
-      firstButton ? (window.location.href = liveVersion) : ""
+      firstButton ? window.open(liveVersion, "_blank") : ""
     );
 
     secondButton.addEventListener("click", () =>
-      secondButton ? (window.location.href = sourceCode) : ""
+      secondButton ? window.open(sourceCode, "_blank") : ""
     );
 
     const github = document.createElement("i");

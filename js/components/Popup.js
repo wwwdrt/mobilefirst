@@ -159,12 +159,13 @@ class Popup {
     childrenB.classList.add("popup-children-b");
 
     const tags = document.createElement("ul");
+    tags.classList.add("popup-tags");
     tags.innerHTML = popupTags;
 
     const hr = document.createElement("hr");
 
     const buttons = document.createElement("div");
-    buttons.classList.add("buttons");
+    buttons.classList.add("popup-buttons");
 
     const firstButton = document.createElement("button");
     firstButton.textContent = "See Live";
@@ -208,8 +209,8 @@ class Popup {
     containerB.appendChild(hr);
     containerB.appendChild(buttons);
     buttons.appendChild(firstButton);
+    buttons.appendChild(secondButton);
     firstButton.appendChild(linkIcon);
-    containerB.appendChild(secondButton);
     secondButton.appendChild(github);
   };
 

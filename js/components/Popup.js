@@ -226,11 +226,21 @@ class Popup {
             console.log(popupData);
             this.generatePopupData(popupData);
             document.querySelector("[data-popup]").style.display = "flex";
+            document.querySelector("body").style.overflow = "hidden";
+            this.hidePopup();
           } else {
             console.log(`Missing data for project with id ${projectId}`);
           }
         });
       });
+    });
+  };
+
+  hidePopup = () => {
+    const close = document.querySelector("[data-popup-hide]");
+    close.addEventListener("click", () => {
+      document.querySelector("[data-popup]").style.display = "none";
+      document.querySelector("body").style.overflow = "auto";
     });
   };
 }

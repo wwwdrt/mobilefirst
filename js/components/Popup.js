@@ -33,7 +33,7 @@ class Popup {
         id: "2",
         image: "/img/secondMobileCard.svg",
         desktopImage: "cardDesktopImg-2",
-        title: `Multi-Post <br class="hide"> Stories`,
+        title: "Multi-Post Stories",
         badges: `
                     <li>CANOPI</li>
                     <li><i class="bx bx-star"></i></li>

@@ -237,10 +237,12 @@ class Popup {
   };
 
   hidePopup = () => {
+    const popup = document.querySelector(".popup-overlay");
     const close = document.querySelector("[data-popup-hide]");
     close.addEventListener("click", () => {
       document.querySelector("[data-popup]").style.display = "none";
       document.querySelector("body").style.overflow = "auto";
+      popup.remove();
     });
   };
 }

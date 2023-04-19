@@ -1,32 +1,199 @@
 /* eslint-disable */
 class Popup {
+  #data;
 
-    #data;
-
-    constructor() {
-        this.#data = [
-            {
-                id: '1',
-                image: "/img/firstMobileCard.svg",
-                desktopImage: "cardDesktopImg-1",
-                title: "Tonic",
-                badges: `
+  constructor() {
+    this.#data = [
+      // PROJECT 1
+      {
+        id: "1",
+        image: "/img/firstMobileCard.svg",
+        desktopImage: "cardDesktopImg-1",
+        title: "Tonic",
+        badges: `
                     <li>CANOPI</li>
                     <li><i class="bx bx-star"></i></li>
                     <li>Back End Dev</li>
                     <li><i class="bx bx-meteor"></i></li>
                     <li>2015</li>
         `,
-                description:
-                    "A daily selection of privately personalized reads; no accounts or sign-ups required.",
-                tags: `
+        description:
+          "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+        tags: `
                 <li><a href="#" class="card-badge">HTML</a></li>
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
-                liveVersion: "https://www.bing.com",
-                sourceCode: "https://github.com",
-            },
-        ]
+        liveVersion: "https://www.bing.com",
+        sourceCode: "https://github.com",
+      },
+
+      // PROJECT 2
+      {
+        id: "2",
+        image: "/img/secondMobileCard.svg",
+        desktopImage: "cardDesktopImg-2",
+        title: `Multi-Post <br class="hide"> Stories`,
+        badges: `
+                    <li>CANOPI</li>
+                    <li><i class="bx bx-star"></i></li>
+                    <li>Back End Dev</li>
+                    <li><i class="bx bx-meteor"></i></li>
+                    <li>2015</li>
+        `,
+        description:
+          "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+        tags: `
+                <li><a href="#" class="card-badge">HTML</a></li>
+                <li><a href="#" class="card-badge">Ruby on Rails</a></li>
+                <li><a href="#" class="card-badge">CSS</a></li>
+                <li><a href="#" class="card-badge">JavaScript</a></li>
+        `,
+        liveVersion: "https://www.bing.com",
+        sourceCode: "https://github.com",
+      },
+
+      // PROJECT 3
+      {
+        id: "3",
+        image: "/img/thirdMobileCard.svg",
+        desktopImage: "cardDesktopImg-3",
+        title: "Facebook 360",
+        badges: `
+                    <li>FACEBOOK</li>
+                    <li><i class="bx bx-star"></i></li>
+                    <li>Full Stack Dev</li>
+                    <li><i class="bx bx-meteor"></i></li>
+                    <li>2015</li>
+        `,
+        description:
+          "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+        tags: `
+                <li><a href="#" class="card-badge">HTML</a></li>
+                <li><a href="#" class="card-badge">Ruby on Rails</a></li>
+                <li><a href="#" class="card-badge">CSS</a></li>
+                <li><a href="#" class="card-badge">JavaScript</a></li>
+        `,
+        liveVersion: "https://www.bing.com",
+        sourceCode: "https://github.com",
+      },
+
+      // PROJECT 4
+      {
+        id: "4",
+        image: "/img/fourthMobileCard.svg",
+        desktopImage: "cardDesktopImg-4",
+        title: "Uber Navigation",
+        badges: `
+                    <li>Uber</li>
+                    <li><i class="bx bx-star"></i></li>
+                    <li>Lead Developer</li>
+                    <li><i class="bx bx-meteor"></i></li>
+                    <li>2018</li>
+        `,
+        description:
+          "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+        tags: `
+                <li><a href="#" class="card-badge">HTML</a></li>
+                <li><a href="#" class="card-badge">Ruby on Rails</a></li>
+                <li><a href="#" class="card-badge">CSS</a></li>
+                <li><a href="#" class="card-badge">JavaScript</a></li>
+        `,
+        liveVersion: "https://www.bing.com",
+        sourceCode: "https://github.com",
+      },
+    ];
+    this.generatePopupData();
+  }
+
+  generatePopupData = () => {
+    const popup = document.querySelector("[data-popup]");
+
+    for (const data of this.#data) {
+      const overlay = document.createElement("div");
+      overlay.classList.add("popup-overlay");
+
+      const containerA = document.createElement("div");
+      containerA.classList.add("popup-container-a");
+
+      const popupHeading = document.createElement("div");
+      popupHeading.classList.add("popup-heading");
+
+      const h2 = document.createElement("h2");
+      h2.textContent = data.title;
+
+      const i = document.createElement("i");
+      i.classList.add("bx", "bx-x");
+      i.setAttribute("data-popup-hide", "");
+
+      const badges = document.createElement("ul");
+      badges.classList.add("popup-badges");
+      badges.innerHTML = data.badges;
+
+      const figure = document.createElement("figure");
+      figure.classList.add("popup-img");
+
+      const img = document.createElement("img");
+      img.classList.add(data.desktopImage);
+      img.src = data.image;
+      img.alt = "project image";
+
+      const containerB = document.createElement("div");
+      containerB.classList.add("popup-container-b");
+
+      const p = document.createElement("p");
+      p.classList.add("popup-description");
+      p.textContent = data.description;
+
+      const childrenB = document.createElement("div");
+      childrenB.classList.add("popup-children-b");
+
+      const tags = document.createElement("ul");
+      tags.innerHTML = data.tags;
+
+      const hr = document.createElement("hr");
+
+      const buttons = document.createElement("div");
+      buttons.classList.add("buttons");
+
+      const firstButton = document.createElement("button");
+      firstButton.textContent = "See Live";
+      firstButton.classList.add("card-btn");
+      firstButton.type = "submit";
+      firstButton.tabIndex = 0;
+      firstButton.ariaLabel = "See Live";
+
+      const linkIcon = document.createElement("i");
+      linkIcon.classList.add("bx", "bx-link-external");
+
+      const secondButton = document.createElement("button");
+      secondButton.textContent = "See Source";
+      secondButton.classList.add("card-btn");
+      secondButton.type = "submit";
+      secondButton.tabIndex = 0;
+      secondButton.ariaLabel = "See Source";
+
+      const github = document.createElement("i");
+      github.classList.add("bx", "bxl-github");
+
+      popup.appendChild(overlay);
+      overlay.appendChild(containerA);
+      containerA.appendChild(popupHeading);
+      popupHeading.appendChild(h2);
+      popupHeading.appendChild(i);
+      containerA.appendChild(badges);
+      containerA.appendChild(figure);
+      figure.appendChild(img);
+      overlay.appendChild(containerB);
+      containerB.appendChild(p);
+      containerB.appendChild(tags);
+      containerB.appendChild(hr);
+      containerB.appendChild(buttons);
+      buttons.appendChild(firstButton);
+      firstButton.appendChild(linkIcon);
+      containerB.appendChild(secondButton);
+      secondButton.appendChild(github);
     }
+  };
 }
+export default Popup;

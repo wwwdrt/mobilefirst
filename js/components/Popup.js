@@ -103,97 +103,135 @@ class Popup {
         sourceCode: "https://github.com",
       },
     ];
-    this.generatePopupData();
+    this.addButtonsListener();
   }
 
-  generatePopupData = () => {
+  generatePopupData = (
+    {
+      image,
+      desktopImage,
+      title,
+      badges: popupBadges,
+      description,
+      tags: popupTags,
+      liveVersion,
+      sourceCode,
+    } = this
+  ) => {
     const popup = document.querySelector("[data-popup]");
 
-    for (const data of this.#data) {
-      const overlay = document.createElement("div");
-      overlay.classList.add("popup-overlay");
+    const overlay = document.createElement("div");
+    overlay.classList.add("popup-overlay");
 
-      const containerA = document.createElement("div");
-      containerA.classList.add("popup-container-a");
+    const containerA = document.createElement("div");
+    containerA.classList.add("popup-container-a");
 
-      const popupHeading = document.createElement("div");
-      popupHeading.classList.add("popup-heading");
+    const popupHeading = document.createElement("div");
+    popupHeading.classList.add("popup-heading");
 
-      const h2 = document.createElement("h2");
-      h2.textContent = data.title;
+    const h2 = document.createElement("h2");
+    h2.textContent = title;
 
-      const i = document.createElement("i");
-      i.classList.add("bx", "bx-x");
-      i.setAttribute("data-popup-hide", "");
+    const i = document.createElement("i");
+    i.classList.add("bx", "bx-x");
+    i.setAttribute("data-popup-hide", "");
 
-      const badges = document.createElement("ul");
-      badges.classList.add("popup-badges");
-      badges.innerHTML = data.badges;
+    const badges = document.createElement("ul");
+    badges.classList.add("popup-badges");
+    badges.innerHTML = popupBadges;
 
-      const figure = document.createElement("figure");
-      figure.classList.add("popup-img");
+    const figure = document.createElement("figure");
+    figure.classList.add("popup-img");
 
-      const img = document.createElement("img");
-      img.classList.add(data.desktopImage);
-      img.src = data.image;
-      img.alt = "project image";
+    const img = document.createElement("img");
+    img.classList.add(desktopImage);
+    img.src = image;
+    img.alt = "project image";
 
-      const containerB = document.createElement("div");
-      containerB.classList.add("popup-container-b");
+    const containerB = document.createElement("div");
+    containerB.classList.add("popup-container-b");
 
-      const p = document.createElement("p");
-      p.classList.add("popup-description");
-      p.textContent = data.description;
+    const p = document.createElement("p");
+    p.classList.add("popup-description");
+    p.textContent = description;
 
-      const childrenB = document.createElement("div");
-      childrenB.classList.add("popup-children-b");
+    const childrenB = document.createElement("div");
+    childrenB.classList.add("popup-children-b");
 
-      const tags = document.createElement("ul");
-      tags.innerHTML = data.tags;
+    const tags = document.createElement("ul");
+    tags.innerHTML = popupTags;
 
-      const hr = document.createElement("hr");
+    const hr = document.createElement("hr");
 
-      const buttons = document.createElement("div");
-      buttons.classList.add("buttons");
+    const buttons = document.createElement("div");
+    buttons.classList.add("buttons");
 
-      const firstButton = document.createElement("button");
-      firstButton.textContent = "See Live";
-      firstButton.classList.add("card-btn");
-      firstButton.type = "submit";
-      firstButton.tabIndex = 0;
-      firstButton.ariaLabel = "See Live";
+    const firstButton = document.createElement("button");
+    firstButton.textContent = "See Live";
+    firstButton.classList.add("card-btn");
+    firstButton.type = "submit";
+    firstButton.tabIndex = 0;
+    firstButton.ariaLabel = "See Live";
 
-      const linkIcon = document.createElement("i");
-      linkIcon.classList.add("bx", "bx-link-external");
+    const linkIcon = document.createElement("i");
+    linkIcon.classList.add("bx", "bx-link-external");
 
-      const secondButton = document.createElement("button");
-      secondButton.textContent = "See Source";
-      secondButton.classList.add("card-btn");
-      secondButton.type = "submit";
-      secondButton.tabIndex = 0;
-      secondButton.ariaLabel = "See Source";
+    const secondButton = document.createElement("button");
+    secondButton.textContent = "See Source";
+    secondButton.classList.add("card-btn");
+    secondButton.type = "submit";
+    secondButton.tabIndex = 0;
+    secondButton.ariaLabel = "See Source";
 
-      const github = document.createElement("i");
-      github.classList.add("bx", "bxl-github");
+    const github = document.createElement("i");
+    github.classList.add("bx", "bxl-github");
 
-      popup.appendChild(overlay);
-      overlay.appendChild(containerA);
-      containerA.appendChild(popupHeading);
-      popupHeading.appendChild(h2);
-      popupHeading.appendChild(i);
-      containerA.appendChild(badges);
-      containerA.appendChild(figure);
-      figure.appendChild(img);
-      overlay.appendChild(containerB);
-      containerB.appendChild(p);
-      containerB.appendChild(tags);
-      containerB.appendChild(hr);
-      containerB.appendChild(buttons);
-      buttons.appendChild(firstButton);
-      firstButton.appendChild(linkIcon);
-      containerB.appendChild(secondButton);
-      secondButton.appendChild(github);
-    }
+    popup.appendChild(overlay);
+    overlay.appendChild(containerA);
+    containerA.appendChild(popupHeading);
+    popupHeading.appendChild(h2);
+    popupHeading.appendChild(i);
+    containerA.appendChild(badges);
+    containerA.appendChild(figure);
+    figure.appendChild(img);
+    overlay.appendChild(containerB);
+    containerB.appendChild(p);
+    containerB.appendChild(tags);
+    containerB.appendChild(hr);
+    containerB.appendChild(buttons);
+    buttons.appendChild(firstButton);
+    firstButton.appendChild(linkIcon);
+    containerB.appendChild(secondButton);
+    secondButton.appendChild(github);
+  };
+
+  addButtonsListener = () => {
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".card-btn");
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const projectId = button.dataset.project;
+          const popupData = this.#data.find((popup) => popup.id === projectId);
+          if (
+            popupData &&
+            popupData.image &&
+            popupData.desktopImage &&
+            popupData.title &&
+            popupData.badges &&
+            popupData.description &&
+            popupData.tags &&
+            popupData.liveVersion &&
+            popupData.sourceCode
+          ) {
+            console.log(popupData);
+            this.generatePopupData(popupData);
+            document.querySelector("[data-popup]").style.display = "flex";
+          } else {
+            console.log(`Missing data for project with id ${projectId}`);
+          }
+        });
+      });
+    });
   };
 }
 export default Popup;

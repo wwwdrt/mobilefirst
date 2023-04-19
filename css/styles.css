@@ -325,7 +325,7 @@ body {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6px);
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;

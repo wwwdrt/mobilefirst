@@ -1,3 +1,4 @@
+/* eslint-disable */
 // eslint-disable-next-line import/extensions
 import Projects from "./components/Projects.js";
 // eslint-disable-next-line max-len

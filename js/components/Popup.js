@@ -24,8 +24,8 @@ class Popup {
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
-        liveVersion: "https://www.bing.com",
-        sourceCode: "https://github.com",
+        liveVersion: "https://wwwdrt.github.io/mobilefirst/",
+        sourceCode: "https://github.com/wwwdrt/mobilefirst/tree/popup-window",
       },
 
       // PROJECT 2
@@ -49,8 +49,8 @@ class Popup {
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
-        liveVersion: "https://www.bing.com",
-        sourceCode: "https://github.com",
+        liveVersion: "https://wwwdrt.github.io/mobilefirst/",
+        sourceCode: "https://github.com/wwwdrt/mobilefirst/tree/popup-window",
       },
 
       // PROJECT 3
@@ -74,8 +74,8 @@ class Popup {
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
-        liveVersion: "https://www.bing.com",
-        sourceCode: "https://github.com",
+        liveVersion: "https://wwwdrt.github.io/mobilefirst/",
+        sourceCode: "https://github.com/wwwdrt/mobilefirst/tree/popup-window",
       },
 
       // PROJECT 4
@@ -99,8 +99,8 @@ class Popup {
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
-        liveVersion: "https://www.bing.com",
-        sourceCode: "https://github.com",
+        liveVersion: "https://wwwdrt.github.io/mobilefirst/",
+        sourceCode: "https://github.com/wwwdrt/mobilefirst/tree/popup-window",
       },
     ];
     this.addButtonsListener();
@@ -182,6 +182,14 @@ class Popup {
     secondButton.type = "submit";
     secondButton.tabIndex = 0;
     secondButton.ariaLabel = "See Source";
+
+    firstButton.addEventListener("click", () =>
+      firstButton ? (window.location.href = liveVersion) : ""
+    );
+
+    secondButton.addEventListener("click", () =>
+      secondButton ? (window.location.href = sourceCode) : ""
+    );
 
     const github = document.createElement("i");
     github.classList.add("bx", "bxl-github");

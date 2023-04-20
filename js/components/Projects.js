@@ -94,6 +94,7 @@ class Projects {
   generateProjectsData = () => {
     const root = document.querySelector('#projects');
 
+    // eslint-disable-next-line no-restricted-syntax
     for (const data of this.#data) {
       const parentContainer = document.createElement('article');
       parentContainer.classList.add('card');

@@ -1,7 +1,6 @@
-/* eslint-disable */
 class Menu {
-
   #menu;
+
   #overlay;
 
   constructor(menuSelector, overlaySelector) {

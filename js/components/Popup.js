@@ -228,12 +228,14 @@ class Popup {
             && popupData.liveVersion
             && popupData.sourceCode
           ) {
+            // eslint-disable-next-line no-console
             console.log(popupData);
             this.generatePopupData(popupData);
             document.querySelector('[data-popup]').style.display = 'flex';
             document.querySelector('body').style.overflow = 'hidden';
             this.hidePopup();
           } else {
+            // eslint-disable-next-line no-console
             console.log(`Missing data for project with id ${projectId}`);
           }
         });

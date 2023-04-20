@@ -7,7 +7,7 @@ class Popup {
       // PROJECT 1
       {
         id: "1",
-        image: "/img/firstMobileCard.svg",
+        image: "img/firstMobileCard.svg",
         desktopImage: "cardDesktopImg-1",
         title: "Tonic",
         badges: `
@@ -31,7 +31,7 @@ class Popup {
       // PROJECT 2
       {
         id: "2",
-        image: "/img/secondMobileCard.svg",
+        image: "img/secondMobileCard.svg",
         desktopImage: "cardDesktopImg-2",
         title: "Multi-Post Stories",
         badges: `
@@ -56,7 +56,7 @@ class Popup {
       // PROJECT 3
       {
         id: "3",
-        image: "/img/thirdMobileCard.svg",
+        image: "img/thirdMobileCard.svg",
         desktopImage: "cardDesktopImg-3",
         title: "Facebook 360",
         badges: `
@@ -81,7 +81,7 @@ class Popup {
       // PROJECT 4
       {
         id: "4",
-        image: "/img/fourthMobileCard.svg",
+        image: "img/fourthMobileCard.svg",
         desktopImage: "cardDesktopImg-4",
         title: "Uber Navigation",
         badges: `

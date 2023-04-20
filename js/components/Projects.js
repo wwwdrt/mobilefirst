@@ -6,7 +6,7 @@ class Projects {
       //   CARD 1
       {
         id: "1",
-        image: "/img/firstMobileCard.svg",
+        image: "img/firstMobileCard.svg",
         desktopImage: "cardDesktopImg-1",
         title: "Tonic",
         badges: `
@@ -23,13 +23,12 @@ class Projects {
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
-        liveVersion: "https://www.bing.com",
-        sourceCode: "https://github.com",
+   
       },
       //   CARD 2
       {
         id: "2",
-        image: "/img/secondMobileCard.svg",
+        image: "img/secondMobileCard.svg",
         desktopImage: "cardDesktopImg-2",
         title: `Multi-Post <br class="hide"> Stories`,
         badges: `
@@ -46,13 +45,12 @@ class Projects {
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
-        liveVersion: "https://www.bing.com",
-        sourceCode: "https://github.com",
+      
       },
       //   CARD 3
       {
         id: "3",
-        image: "/img/thirdMobileCard.svg",
+        image: "img/thirdMobileCard.svg",
         desktopImage: "cardDesktopImg-3",
         title: "Tonic",
         badges: `
@@ -69,13 +67,13 @@ class Projects {
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
-        liveVersion: "https://www.bing.com",
-        sourceCode: "https://github.com",
+      
+        
       },
       //   CARD 4
       {
         id: "4",
-        image: "/img/fourthMobileCard.svg",
+        image: "img/fourthMobileCard.svg",
         desktopImage: "cardDesktopImg-4",
         title: `Multi-Post <br class="hide"> Stories`,
         badges: `
@@ -92,8 +90,7 @@ class Projects {
                 <li><a href="#" class="card-badge">CSS</a></li>
                 <li><a href="#" class="card-badge">JavaScript</a></li>
         `,
-        liveVersion: "https://www.bing.com",
-        sourceCode: "https://github.com",
+    
       },
     ];
     this.generateProjectsData();

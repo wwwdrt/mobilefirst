@@ -84,7 +84,7 @@
 
 > Link to deployed project.
 
-- [Live Demo Link](https://dainty-gingersnap-8977c5.netlify.app/)
+- [Live Demo Link](https://wwwdrt.github.io/mobilefirst/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

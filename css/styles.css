@@ -703,7 +703,7 @@ body {
   font-weight: 500;
   color: var(--contact-btn-text);
   align-self: flex-start;
-  margin-left: 1.3rem;
+  margin-left: 5%;
 }
 
 #contact form .contact-btn:hover {
@@ -726,12 +726,22 @@ body {
 
 #contact textarea::placeholder {
   color: #b3bac5;
-  padding-top: 0.5rem;
 }
 
 #contact input:focus,
 #contact textarea:focus {
-  outline: none;
+  outline-color: #f9d949;
+}
+
+[data-form-error] {
+  display: none;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  justify-content: center;
+  font-weight: 500;
+  color: #f9d949;
+  text-decoration: underline;
 }
 
 /* DESKTOP VERSION */

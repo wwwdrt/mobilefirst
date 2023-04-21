@@ -3,9 +3,10 @@
 class Storage {
   constructor() {
     this.isLocalStorageAvailable();
+    this.isSessionStorageAvailable();
   }
 
-  validateLocalStorage = (type) => {
+  validateStorage = (type) => {
     let storage;
     try {
       storage = window[type];
@@ -31,11 +32,20 @@ class Storage {
       );
     }
   };
+
   isLocalStorageAvailable = () => {
-    if (this.validateLocalStorage("localStorage")) {
-      console.log('Yippee! We can use localStorage awesomeness');
+    if (this.validateStorage("localStorage")) {
+      console.log("Yippee! We can use localStorage awesomeness");
     } else {
-      console.log('Too bad, no localStorage for us');
+      console.log("Too bad, no localStorage for us");
+    }
+  };
+
+  isSessionStorageAvailable = () => {
+    if (this.validateStorage("sessionStorage")) {
+      console.log("Yippee! We can use sessionStorage awesomeness");
+    } else {
+      console.log("Too bad, no sessionStorage for us");
     }
   };
 }

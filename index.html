@@ -19,20 +19,40 @@
     </div>
 
     <ul id="menu">
-        <li class="menu-item hide">
+        <li class="menu-item">
             <a href="#projects">Portfolio</a>
         </li>
-        <li class="menu-item hide">
+        <li class="menu-item">
             <a href="#about">About</a>
         </li>
-        <li class="menu-item hide">
-            <a href="#">Contact</a>
+        <li class="menu-item">
+            <a href="#contact">Contact</a>
         </li>
     </ul>
 
-    <nav id="menu-btn" aria-label="hamburger menu">
+    <nav id="menu-btn" aria-label="mobile menu" data-menu>
         <span class="bar"></span>
     </nav>
+
+    <div id="mobile-menu-overlay" data-overlay>
+        <ul class="overlay">
+            <li>
+                <a
+                        href="#projects"
+                        class="overlay-item">Portfolio</a>
+            </li>
+            <li>
+                <a
+                        href="#about"
+                        class="overlay-item">About</a>
+            </li>
+            <li>
+                <a
+                        href="#contact"
+                        class="overlay-item">Contact</a>
+            </li>
+        </ul>
+    </div>
 </header>
 
 <!-- HEADER -->
@@ -40,7 +60,12 @@
 <section id="hero">
     <div class="hero-container">
         <div class="hero-info">
-            <h1>I’m Alexandra. <br> Glad to see <br> you!</h1>
+            <h1>
+                I’m Alexandra.
+                <br>
+                Glad to see
+                <span>you!</span>
+            </h1>
             <p>I’m a software developer! I can help you build a product , feature or website Look through some of
                 my work and experience! If you like what you see and have a project you need coded, don’t hesitate
                 to contact me </p>
@@ -64,150 +89,44 @@
             </li>
         </ul>
     </div>
+
+    <div id="popup" data-popup>
+    </div>
+
 </section>
 
 <!-- PROJECTS -->
 
 <section id="projects">
-    <article class="card">
-        <figure class="card-img">
-            <!--              MOBILE IMG-->
-            <img
-                    src="/img/firstMobileCard.svg"
-                    alt="Tonic Project"
-            >
-        </figure>
-        <section class="card-content">
-            <div class="card-text">
-                <h2>Tonic</h2>
-                <ul class="badges">
-                    <li>CANOPI</li>
-                    <li><i class="bx bx-star"></i></li>
-                    <li>Back End Dev</li>
-                    <li><i class="bx bx-meteor"></i></li>
-                    <li>2015</li>
-                </ul>
-                <p>A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
-            </div>
-            <ul class="tags">
-                <li><a href="#" class="card-badge">HTML</a></li>
-                <li><a href="#" class="card-badge">CSS</a></li>
-                <li><a href="#" class="card-badge">JavaScript</a></li>
-            </ul>
-            <button class="card-btn" type="submit" tabindex="0" aria-label="See project">See project</button>
-        </section>
-    </article>
-    <article class="card">
-        <figure class="card-img">
-            <!--              MOBILE IMG-->
-            <img
-                    src="/img/secondMobileCard.svg"
-                    alt="Multi-Post Stories Project"
-            >
-        </figure>
-        <section class="card-content">
-            <div class="card-text">
-                <h2>Multi-Post <br> Stories </h2>
-                <ul class="badges">
-                    <li>CANOPI</li>
-                    <li><i class="bx bx-star"></i></li>
-                    <li>Back End Dev</li>
-                    <li><i class="bx bx-meteor"></i></li>
-                    <li>2015</li>
-                </ul>
-                <p>A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
-            </div>
-            <ul class="tags">
-                <li><a href="#" class="card-badge">HTML</a></li>
-                <li><a href="#" class="card-badge">CSS</a></li>
-                <li><a href="#" class="card-badge">JavaScript</a></li>
-            </ul>
-            <button class="card-btn" type="submit" tabindex="0" aria-label="See project">See project</button>
-        </section>
-    </article>
-    <article class="card">
-        <figure class="card-img">
-            <!--              MOBILE IMG-->
-            <img
-                    src="/img/thirdMobileCard.svg"
-                    alt="Tonic Project"
-            >
-        </figure>
-        <section class="card-content">
-            <div class="card-text">
-                <h2>Tonic</h2>
-                <ul class="badges">
-                    <li>CANOPI</li>
-                    <li><i class="bx bx-star"></i></li>
-                    <li>Back End Dev</li>
-                    <li><i class="bx bx-meteor"></i></li>
-                    <li>2015</li>
-                </ul>
-                <p>A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
-            </div>
-            <ul class="tags">
-                <li><a href="#" class="card-badge">HTML</a></li>
-                <li><a href="#" class="card-badge">CSS</a></li>
-                <li><a href="#" class="card-badge">JavaScript</a></li>
-            </ul>
-            <button class="card-btn" type="submit" tabindex="0" aria-label="See project">See project</button>
-        </section>
-    </article>
-    <article class="card">
-        <figure class="card-img">
-            <!--              MOBILE IMG-->
-            <img
-                    src="/img/fourthMobileCard.svg"
-                    alt="Multi-Post Stories Project"
-            >
-        </figure>
-        <section class="card-content">
-            <div class="card-text">
-                <h2>Multi-Post <br> Stories</h2>
-                <ul class="badges">
-                    <li>CANOPI</li>
-                    <li><i class="bx bx-star"></i></li>
-                    <li>Back End Dev</li>
-                    <li><i class="bx bx-meteor"></i></li>
-                    <li>2015</li>
-                </ul>
-                <p>A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
-            </div>
-            <ul class="tags">
-                <li><a href="#" class="card-badge">HTML</a></li>
-                <li><a href="#" class="card-badge">CSS</a></li>
-                <li><a href="#" class="card-badge">JavaScript</a></li>
-            </ul>
-            <button class="card-btn" type="submit" tabindex="0" aria-label="See project">See project</button>
-        </section>
-    </article>
 </section>
 
 <!-- ABOUT -->
 
 <section id="about">
-    <h2 class="about-heading">About Myself</h2>
-    <p>Hello I’m a software developer! I can help you build a product , feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
-    <h4 class="about-cta">LET'S CONNECT</h4>
-    <ul class="hero-social">
-        <li class="social-item">
-            <a href="https://twitter.com"><img src="img/twitter.svg" alt="Twitter"></a>
-        </li>
-        <li class="social-item">
-            <a href="https://linkedin.com"><img src="img/linkedin.svg" alt="LinkedIn"></a>
-        </li>
-        <li class="social-item">
-            <a href="https://medium.com"><img src="img/medium.svg" alt="Medium"></a>
-        </li>
-        <li class="social-item">
-            <a href="https://github.com"><img src="img/github.svg" alt="GitHub"></a>
-        </li>
-        <li class="social-item">
-            <a href="https://bing.com"><img src="img/peace.svg" alt="Peace"></a>
-        </li>
-    </ul>
-    <button class="card-btn" type="submit" tabindex="0" aria-label="Get my resume">Get my
-        resume</button>
+    <div class="about-me">
+        <h2 class="about-heading">About Myself</h2>
+        <p>Hello I’m a software developer! I can help you build a product , feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
+        <h4 class="about-cta">LET'S CONNECT</h4>
+        <ul class="hero-social">
+            <li class="social-item">
+                <a href="https://twitter.com"><img src="img/twitter.svg" alt="Twitter"></a>
+            </li>
+            <li class="social-item">
+                <a href="https://linkedin.com"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+            </li>
+            <li class="social-item">
+                <a href="https://medium.com"><img src="img/medium.svg" alt="Medium"></a>
+            </li>
+            <li class="social-item">
+                <a href="https://github.com"><img src="img/github.svg" alt="GitHub"></a>
+            </li>
+            <li class="social-item">
+                <a href="https://bing.com"><img src="img/peace.svg" alt="Peace"></a>
+            </li>
+        </ul>
+        <button class="card-btn" type="submit" tabindex="0" aria-label="Get my resume">Get my
+            resume</button>
+    </div>
 
     <!--        LANGUAGES -->
     <div id="accordion" role="tablist">
@@ -220,8 +139,8 @@
                         <img src="img/jsEllipse.svg" alt="JavaScript Logo">
                         <span>JavaScript</span>
                     </li>
-                    <li class="language-item lang-fix-html-img">
-                        <img src="img/htmlEllipse.svg" alt="HTML Logo">
+                    <li class="language-item">
+                        <img src="img/htmlEllipse.svg" alt="HTML Logo" height="50px" width="51px">
                         <span>HTML</span>
                     </li>
                     <li class="language-item">
@@ -233,14 +152,58 @@
         </section>
         <section class="accordion-section">
             <h3 id="skills-heading" role="tab" aria-controls="skills-panel">Skills <i class="bx bxs-chevron-right"></i></h3>
-            <hr>
+            <hr class="divisor">
         </section>
         <section class="accordion-section">
             <h3 id="frameworks-heading" role="tab" aria-controls="frameworks-panel">Frameworks <i
                     class="bx bxs-chevron-right"></i></h3>
-            <hr>
+            <hr class="divisor">
         </section>
     </div>
 </section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+    <h2 class="contact-heading">Contact me</h2>
+    <p class="contact-description">If you have an application you are interested in developing, a feature that you need
+        built or a project
+        that needs coding. I’d love to help with it</p>
+    <form action="https://formspree.io/f/xyyadqor" method="POST">
+        <label for="name"></label>
+        <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Lorem Ipsum"
+                maxlength="30"
+                required
+        >
+        <label for="email"></label>
+        <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="loremipsum@gmail.com"
+                required
+        >
+        <label for="message"></label>
+        <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Write your message here..."
+                maxlength="500"
+                autofocus
+                required
+        ></textarea>
+        <span data-form-error>⚠️The content of the email field has to be in lower case⚠️</span>
+        <button class="contact-btn" type="submit" tabindex="0" aria-label="Get in touch" title="Send message">Get in
+            touch</button>
+    </form>
+</section>
+
+<script src="./js/script.js" type="module"></script>
 </body>
 </html>
